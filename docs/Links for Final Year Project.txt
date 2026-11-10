@@ -3,3 +3,16 @@ Links for Final Year Project
 Used to keep server.js restarting after save. (prevents manual stop start)
 https://docs.npmjs.com/cli/v10/using-npm/scripts
 https://nodemon.io/
+
+Health Check Endpoints In Express
+https://leyaa.ai/codefly/learn/express/part-3/express-health-check-endpoints
+
+MySQL documentation
+https://sidorares.github.io/node-mysql2/docs
+
+Async functions
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
+
+Express Routing
+https://expressjs.com/en/guide/routing/
+

@@ -1,9 +1,34 @@
 const express = require("express");
 const cors = require("cors");
+const pool = require("./config/database");
+
 const app = express();
 app.use(cors());
 app.use(express.json());
+//Test API and database connection
+app.get("/api/health", async (req, res) => {
+try{
+    await pool.query("SELECT 1");      
+    
+    res.json({
 
-app.get("/api/health", (req, res) => res.json({ status: "ok" }));
+    status: "ok",
+    database: "dispatchiq"
+ });
+//Error handling for database connection issues
+} catch (error) {
+    console.error("Database connection error:", error.message);
 
-app.listen(3000, () => console.log("API running on http://localhost:3000"));
+    res.status(500).json({
+        status: "error",
+        message: "Database connection failed"
+         });
+        }
+});
+
+//Start server 
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`API running on http://localhost:${PORT}`);
+});

@@ -1,0 +1,5 @@
+Links for Final Year Project
+
+Used to keep server.js restarting after save. (prevents manual stop start)
+https://docs.npmjs.com/cli/v10/using-npm/scripts
+https://nodemon.io/

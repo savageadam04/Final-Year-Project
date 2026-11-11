@@ -5,18 +5,27 @@
 <h2>User Creation Page</h2>
 
 <form>
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe">
-  <label for="lname">Email Address:</label><br>
-  <input type="text" id="lname" name="email" value="Doe">
-  <input type="submit" value="Submit">
+  <label for="fullname">Full Name:</label><br>
+  <input type="text" id="fullname" name="fullname"><br><br>
+
+  <label for="email">Email Address:</label><br>
+  <input type="text" id="email" name="email" ><br><br>
+
+  <label for="role">User Role:</label><br>
+  <select>
+        <option value="Field Engineer" selected>Field Engineer</option>
+        <option value="Workshop Manager">Workshop Manager</option>
+        <option value="Service Co-Ordinator">Service Co-Ordinator</option>
+        <option value="Support Staff">Support Staff</option>
+    </select><br><br>
+  
+  <label for="pwd">Initial Password:</label><br>
+  <input type="password" id="pwd" name="pwd"><br><br>
+
 </form>
 
-<p>Note that the form itself is not visible.</p>
+ <input type="submit" value="Submit">
 
-<p>Also note that the default width of text input fields is 20 characters.</p>
-
+</form>
 </body>
 </html>

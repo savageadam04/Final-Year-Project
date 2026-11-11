@@ -16,3 +16,5 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/asy
 Express Routing
 https://expressjs.com/en/guide/routing/
 
+HTML Form
+https://www.w3schools.com/html/html_forms.asp

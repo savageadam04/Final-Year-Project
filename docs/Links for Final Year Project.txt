@@ -33,3 +33,7 @@ Java Script & Form Submission
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects
 https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event
 https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/value
+
+Fetch() 
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch

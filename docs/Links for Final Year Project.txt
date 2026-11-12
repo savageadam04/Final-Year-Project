@@ -20,3 +20,6 @@ HTML Form
 https://www.w3schools.com/html/html_forms.asp
 HTML Drop Down
 https://www.geeksforgeeks.org/html/html-dropdown/
+
+Fake emails for later: 
+https://ethereal.email/

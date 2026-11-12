@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title> DispatchIQ - User Creation</title>
+    </head>
 <body>
 
 <h2>User Creation Page</h2>
 
-<form>
+<form id ="DispatchIQcreationForm">
+    
   <label for="fullname">Full Name:</label><br>
-  <input type="text" id="fullname" name="fullname"><br><br>
+  <input type="text" id="fullname" name="fullname" required><br><br>
 
   <label for="email">Email Address:</label><br>
-  <input type="text" id="email" name="email" ><br><br>
+  <input type="email" id="email" name="email" ><br><br>
 
   <label for="role">User Role:</label><br>
-  <select>
-        <option value="Field Engineer" selected>Field Engineer</option>
-        <option value="Workshop Manager">Workshop Manager</option>
-        <option value="Service Co-Ordinator">Service Co-Ordinator</option>
-        <option value="Support Staff">Support Staff</option>
+  <select id="role" name="role" required>
+        <option value="field_engineer" selected>Field Engineer</option>
+        <option value="workshop_manager">Workshop Manager</option>
+        <option value="service_coordinator">Service Co-Ordinator</option>
+        <option value="support_staff">Support Staff</option>
     </select><br><br>
   
   <label for="pwd">Initial Password:</label><br>
   <input type="password" id="pwd" name="pwd"><br><br>
 
+  <input type="submit" value="Create Account">
 </form>
 
- <input type="submit" value="Submit">
+ 
 
 </form>
 </body>

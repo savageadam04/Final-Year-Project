@@ -23,3 +23,8 @@ https://www.geeksforgeeks.org/html/html-dropdown/
 
 Fake emails for later: 
 https://ethereal.email/
+
+CSS Styling
+https://www.w3schools.com/html/html_css.asp
+Class Selector
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors

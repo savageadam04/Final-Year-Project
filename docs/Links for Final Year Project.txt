@@ -44,3 +44,5 @@ https://www.npmjs.com/package/bcryptjs
 Crypto
 https://nodejs.org/api/crypto.html
 
+JSON Web Tokens
+https://www.jwt.io/introduction#what-is-json-web-token

@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const pool = require("./config/database");
 const path = require("path");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 
 const app = express();
 app.use(cors());
@@ -54,6 +56,84 @@ try{
          });
         }
 });
+
+app.post("/api/login", async (req, res) => {
+    
+    //Get email and password sent by frontend
+    const { email, password } = req.body;
+
+    //Check both fields provided
+    if (!email || !password) {
+        return res.status(400).json({
+            message: "Email and password are required"
+        });
+    }
+    try{
+        //Find the user in the database using their email.
+        const [users] = await pool.execute(
+            "SELECT user_id, name, email, password_hash, role, is_active, must_change_password FROM dispatch_user WHERE email = ? LIMIT 1",
+            [email]
+        );
+
+        //Check whether user exists.
+        if (users.length === 0) {
+            return res.status(401).json({
+                message: "Invalid email or password"
+            });
+        }
+
+        const user = users[0];
+
+        //Check whether user is account is active
+        if (!user.is_active) {
+            return res.status(403).json({
+                message: "Account is inactive. Please contact the administrator."
+            });
+        }
+
+        //Compare entered password with stored hash.
+        const passwordMatch = await bcrypt.compare(
+        password,
+         user.password_hash
+        );
+
+        if(!passwordMatch) {
+            return res.status(401).json({
+                message: "Invalid email or password"
+            });
+        }
+
+        //Generate a JWT token for the user
+        const token = jwt.sign(
+            {
+                user_id: user.user_id,
+                role: user.role
+            },
+            process.env.JWT_SECRET,
+            { expiresIn: "2h" }
+        );
+
+        //Send succesful login response.
+        res.json({
+            message: "Login successful",
+            token: token,
+            user: {
+                user_id: user.user_id,
+                name: user.name,
+                email: user.email,
+                role: user.role,
+                must_change_password: user.must_change_password
+            }
+        });
+            
+    } catch (error) {
+        console.error("Login error:", error.message);
+        res.status(500).json({
+            message: "An error occurred during login"
+        });
+    }
+
+        });
 
 //Start server 
 const PORT = process.env.PORT || 3000;

@@ -1,0 +1,1 @@
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqldump.exe" -u root -p dispatchiq > "C:\Final Year Project Storage\Database Backup\dispatchiq_backup.sql"

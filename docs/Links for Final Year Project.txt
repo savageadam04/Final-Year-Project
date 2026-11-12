@@ -37,3 +37,10 @@ https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/value
 Fetch() 
 https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch
+
+Password Hashing (never stored in DB)
+Bcrypt
+https://www.npmjs.com/package/bcryptjs
+Crypto
+https://nodejs.org/api/crypto.html
+

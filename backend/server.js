@@ -1,10 +1,13 @@
 const express = require("express");
 const cors = require("cors");
 const pool = require("./config/database");
+const path = require("path");
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+// Serve frontend static files
+app.use(express.static(path.join(__dirname, "../frontend")));
 //Test API and database connection
 app.get("/api/health", async (req, res) => {
 try{

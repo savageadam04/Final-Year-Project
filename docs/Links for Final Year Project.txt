@@ -28,3 +28,8 @@ CSS Styling
 https://www.w3schools.com/html/html_css.asp
 Class Selector
 https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors
+
+Java Script & Form Submission
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/value

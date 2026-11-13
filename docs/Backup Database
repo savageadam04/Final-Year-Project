@@ -1,1 +1,9 @@
 "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqldump.exe" -u root -p dispatchiq > "C:\Final Year Project Storage\Database Backup\dispatchiq_backup.sql"
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqldump.exe -u root -p root > "%USERPROFILE%\Desktop\dispatchiq_backup.sql"
+
+C:\>C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqldump.exe -u root -p passordgoeshere > "%USERPROFILE%\Desktop\dispatchiq_backup.sql"
+'C:\Program' is not recognized as an internal or external command,
+operable program or batch file.
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqldump.exe" -u root -p dispatchiq > "C:\Final Year Project Storage\Database Backup\dispatchiq_backup.sql"
